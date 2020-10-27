@@ -5,7 +5,7 @@ https://www.youtube.com/watch?v=FZRLRVxlxUw&list=PLm0WEBt1zBgLSZJ-1Ttt2nvfcyudQ-
 https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 https://desarrolloweb.com/articulos/trabajar-ramas-git.html
 
-**Creen repositori git PLANOL-xxxx**
+**Creem repositori nou LOCAL git PLANOL-xxxx**
 1. Clone del repositori en local c:\temp\proves_branch\PLANOL-ProvaBranch
 2. Creen un READMI.md
 3. git add README.md
@@ -52,7 +52,7 @@ Per fer que master tambe tingui els de develop:
   - Ells repassan i fan merge del request
 
 
-** git log**
+**git log**
 1. git log # per veure els commits que s'han fet.
   - **HEAD es on apunta actualment en el repositori local**
 2. git status
@@ -85,7 +85,7 @@ per comparar dos commits
 - Per comparar branch
   - git diff develop..master
 
-# git diff # per veure canvis (git LOCAL)
+**git diff** per veure canvis (git LOCAL)
 git diff --> diferencies entre working  area i index area (LOCAL)
 git diff --cached diferencies entre index area i repositori local
 
@@ -94,7 +94,7 @@ git diff --cached diferencies entre index area i repositori local
   - git rm --cached borra de l'index pero no del workingArea
   - git rm -f borra del workingArea i del index Area
 
-**More fitxers (rename - move)**
+**Move-remove fitxers**
 1. mv menu.txt menu.log
 2. git add menu.log
 3. git add menu.txt

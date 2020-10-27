@@ -28,7 +28,7 @@ Posteriormente se crearán las siguientes ramas:
 ## Crear el gitFlow
  Ver documentación [gitFlow-workFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
-- Neva Feature
+- **Nueva Feature**
   - git checkout master
   - git checkout -b develop
   - git checkout -b feature_branch
@@ -39,13 +39,13 @@ Posteriormente se crearán las siguientes ramas:
   - git merge develop
   - git branch -d feature_branch
 
- - Nuevo Release
+ - **Nuevo Release**
   - git checkout develop
   - git checkout -b release/1.0
   - git checkout master
   - git merge release/1.0
 
- - Hotfix
+ - **Hotfix**
   - git checkout master 
   - git checkout -b hotfix_branch 
     - **Se ha trabajado con algunos commits en hotfix_branch** 
