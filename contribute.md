@@ -25,7 +25,7 @@ Posteriormente se crearán las siguientes ramas:
 **APB-PLANOL** WorkFlow
 <img src=/images/workFlow.png alt="APB-PLANOL workFlow">
 
-# Crear el gitFlow
+## Crear el gitFlow
  Veure documentacio [gitFlow-workFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
 - New Feature
@@ -57,7 +57,7 @@ Posteriormente se crearán las siguientes ramas:
   - git branch -d hotfix_branch
 
 
-# Example: start from zero in a working directory with three files (README.md, contribute.md, /images/workFlow.png)
+## Example: start from zero in a working directory with three files (README.md, contribute.md, /images/workFlow.png)
 - git init
 - git add .
   - Three files: README.md, contribute.md /images/workFlow.png
@@ -77,4 +77,24 @@ Posteriormente se crearán las siguientes ramas:
   - git checkout master
   - git merge develop
   - git push origin master
+  - Create Release V1.0
+    - git checkout develop
+    - git checkout -b release/1.0
+    - git push origin release/1.0
+    - git checkout master
+    - git merge release/1.0
+  - Create a hotfix
+    - git checkout master
+    - git checkout -b hotfix_1
+      - Do some changes to README.md and Contribute.md
+      - git add -A
+      - git commit -m"commit hotfix_1"
+    - git checkout develop
+    - git merge hotfix_1
+    - git checkout master
+    - git merge hotfix_1
+    - git branch -d hotfix_1
+    - git push origin master
+    - git checkout develop
+    - git push origin develop
   

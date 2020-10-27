@@ -16,13 +16,13 @@ https://desarrolloweb.com/articulos/trabajar-ramas-git.html
 8. git branch develop (crear bifurcacio)
 9.  git chekout develop (canviar de branca)
 10. git switch -b develop (crea i es situa en la branca)
+    1.  Fem canvis 
 11. git checkout master
-12. git merge test
-13. Si volem retornar a la bhanca develop
-14. git checkout develop (Ep develop no esta en la ultim commit)
-15. git merge master  (fa un fast-forware) Ara HEAD de master i develop apuntent al mateix
+12. git merge develop
 16. git checkout -b develop
-17.  git push --set-upstream origin develop
+17. git push --set-upstream origin develop
+18. git checkout master
+19. git push origin master
 
 **Merge de dues branchs en local**
 Suposem que tenim dues branch master i develop
@@ -44,17 +44,17 @@ Per fer que master tambe tingui els de develop:
 2. git merge develop
 
 
-# Forma de treballar
-1/ Fer un fork del repositori on em de treballar
-2/ Fer clone del repositori fork
-3/ push dels canvis al nostre repositori
-4/ Crear un pull-request al repositiri original
-Ells repassan i fan merge del request
+# Forma de treballar PROPOSTA
+1. Fer un fork del repositori on em de treballar
+2. Fer clone del repositori fork
+3. push dels canvis al nostre repositori
+4. Crear un pull-request al repositiri original
+  - Ells repassan i fan merge del request
 
 
 ** git log**
 1. git log # per veure els commits que s'han fet.
-  **HEAD es on apunta actualment en el repositori local**
+  - **HEAD es on apunta actualment en el repositori local**
 2. git status
 3. echo "Linia 1" >> hola.txt
 4. git add hola.txt
@@ -77,25 +77,22 @@ Ells repassan i fan merge del request
 21. git commit --amend S'afegeix en el commit anterior. Vull dir no crea un nou commit
 
 **Per revisar un commit**
-- git show codiCommit
+- git show codiCommit (primers 5 digits del hash de commit- git log per trobar-los)
 
 **git diff**
 per comparar dos commits 
 - git diff HEAD¬1..HEAD¬2 (compara els dos commits)
-- Per comorar branch
-  - git diff test..master
+- Per comparar branch
+  - git diff develop..master
 
-# Corregir errores.
-# No generar un commit nou. pq t'has deixat alguna cosa )
-
-# git diff # per veure canvis
-git diff --> diferencies entre working  area i index area
+# git diff # per veure canvis (git LOCAL)
+git diff --> diferencies entre working  area i index area (LOCAL)
 git diff --cached diferencies entre index area i repositori local
 
 **git rm borrar fitxers**
-BSi borrem del working area (directori) i tambe des de index Area
-- git rm --cached borra de l'index pero no del workingArea
-- git rm -f borra del workingArea i del index Area
+-Si borrem del working area (directori) i tambe des de index Area
+  - git rm --cached borra de l'index pero no del workingArea
+  - git rm -f borra del workingArea i del index Area
 
 **More fitxers (rename - move)**
 1. mv menu.txt menu.log
