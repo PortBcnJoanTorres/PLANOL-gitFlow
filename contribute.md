@@ -26,19 +26,7 @@ Posteriormente se crearán las siguientes ramas:
 <img src=/images/workFlow.png alt="APB-PLANOL workFlow">
 
 # Crear el gitFlow
- [Documentacio](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
-
-# Create repositori primer cop
-- git init
-- git add .
-  - Tres fitxers: README.md, contribute.md /images/workFlow.png
-- git commit -m "First commit v1.0"
-- git add remote origin https://github.com/portdebarcelona/PLANOL-gitFlow.git
-- git push origin master
-- git checkout -b develop
-- git push --set-upstream origin develop
-  - **Ampliar contribute.md**
-  - git checkout -b feature_contribute
+ Veure documentacio [gitFlow-workFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
 - New Feature
   - git checkout master
@@ -69,4 +57,24 @@ Posteriormente se crearán las siguientes ramas:
   - git branch -d hotfix_branch
 
 
-
+# Example: start from zero in a working directory with three files (README.md, contribute.md, /images/workFlow.png)
+- git init
+- git add .
+  - Three files: README.md, contribute.md /images/workFlow.png
+- git commit -m "First commit v1.0"
+- git add remote origin https://github.com/portdebarcelona/PLANOL-gitFlow.git
+- git push origin master
+- git checkout -b develop
+- git push --set-upstream origin develop
+  - **Add example in contribute.md**
+  - git checkout -b feature_contribute
+    - Added example in contribute.md
+    - git add -A
+    - git commit -m "Added example"
+  - git checkout develop
+  - git merge feature_contribute
+  - git push origin develop
+  - git checkout master
+  - git merge develop
+  - git push origin master
+  
