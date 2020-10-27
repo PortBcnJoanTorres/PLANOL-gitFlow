@@ -26,20 +26,20 @@ Posteriormente se crearán las siguientes ramas:
 <img src=/images/workFlow.png alt="APB-PLANOL workFlow">
 
 ## Crear el gitFlow
- Veure documentacio [gitFlow-workFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+ Ver documentación [gitFlow-workFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
-- New Feature
+- Neva Feature
   - git checkout master
   - git checkout -b develop
   - git checkout -b feature_branch
-  **work happens on feature branch**
+    - **Trabajamos en la branca**
   - git checkout develop
   - git merge feature_branch
   - git checkout master
   - git merge develop
   - git branch -d feature_branch
 
- - New Release
+ - Nuevo Release
   - git checkout develop
   - git checkout -b release/1.0
   - git checkout master
@@ -48,7 +48,7 @@ Posteriormente se crearán las siguientes ramas:
  - Hotfix
   - git checkout master 
   - git checkout -b hotfix_branch 
-    **work is done commits are added to the hotfix_branch** 
+    - **Se ha trabajado con algunos commits en hotfix_branch** 
   - git checkout develop 
   - git merge hotfix_branch 
   - git checkout master 
@@ -57,18 +57,18 @@ Posteriormente se crearán las siguientes ramas:
   - git branch -d hotfix_branch
 
 
-## Example: start from zero in a working directory with three files (README.md, contribute.md, /images/workFlow.png)
+## Ejemplo: desde cero en el  working directory con tres ficheros (README.md, contribute.md, /images/workFlow.png)
 - git init
 - git add .
-  - Three files: README.md, contribute.md /images/workFlow.png
+  - Tres ficheros: README.md, contribute.md /images/workFlow.png
 - git commit -m "First commit v1.0"
 - git add remote origin https://github.com/portdebarcelona/PLANOL-gitFlow.git
 - git push origin master
 - git checkout -b develop
 - git push --set-upstream origin develop
-  - **Add example in contribute.md**
+  - **Añadimos ejemplo en contribute.md**
   - git checkout -b feature_contribute
-    - Added example in contribute.md
+    - Añadimos ejemplo en contribute.md
     - git add -A
     - git commit -m "Added example"
   - git checkout develop
@@ -77,16 +77,16 @@ Posteriormente se crearán las siguientes ramas:
   - git checkout master
   - git merge develop
   - git push origin master
-  - Create Release V1.0
+  - Crear Release V1.0
     - git checkout develop
     - git checkout -b release/1.0
     - git push origin release/1.0
     - git checkout master
     - git merge release/1.0
-  - Create a hotfix
+  - Crear hotfix
     - git checkout master
     - git checkout -b hotfix_1
-      - Do some changes to README.md and Contribute.md
+      - Realizamos cambios en  README.md y Contribute.md
       - git add -A
       - git commit -m"commit hotfix_1"
     - git checkout develop

@@ -103,7 +103,6 @@ git diff --cached diferencies entre index area i repositori local
 6. Alternativa 
    - git mv ... ho fa tot directament
 
-
 **git tag**
 1. git tag -a V1.0 -m "Primera version de la app" (-a annotated tags)
 2. git cat-file  <codi> per veure objectes (commits)
