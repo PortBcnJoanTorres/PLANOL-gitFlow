@@ -28,6 +28,18 @@ Posteriormente se crearán las siguientes ramas:
 # Crear el gitFlow
  [Documentacio](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
+# Create repositori primer cop
+- git init
+- git add .
+  - Tres fitxers: README.md, contribute.md /images/workFlow.png
+- git commit -m "First commit v1.0"
+- git add remote origin https://github.com/portdebarcelona/PLANOL-gitFlow.git
+- git push origin master
+- git checkout -b develop
+- git push --set-upstream origin develop
+  - **Ampliar contribute.md**
+  - git checkout -b feature_contribute
+
 - New Feature
   - git checkout master
   - git checkout -b develop
